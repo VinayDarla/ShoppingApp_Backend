@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "589f3e76-4e56-4475-8743-f61b294b9e2c",
+		"name": "ProductService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add product",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "7ec2c27b-3c6f-45a4-b648-beddc142c29e",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productName\" : \"Iphone13\",\r\n    \"productDescription\" : \"Iphone 13 256GB 16GB\",\r\n    \"price\" : 700000.00,\r\n    \"features\" : \"smartphone\",\r\n    \"productQuantity\" : 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/v1.0/Shopping/iphone13/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1.0",
+						"Shopping",
+						"iphone13",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJndXJ1a2lyYW5AZ21haWwuY29tIiwiZXhwIjoxNjYxNDE1MTYwLCJpYXQiOjE2NjE0MTE1NjB9.LhQHMVGhapMMSTm6JcIBdJSuTZhCBm3QQp_CFa_K5og",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/v1.0/Shopping/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1.0",
+						"Shopping",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product by productname",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJndXJ1a2lyYW5AZ21haWwuY29tIiwiZXhwIjoxNjYxNDE1MTYwLCJpYXQiOjE2NjE0MTE1NjB9.LhQHMVGhapMMSTm6JcIBdJSuTZhCBm3QQp_CFa_K5og",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/api/v1.0/Shopping/Iphone13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1.0",
+						"Shopping",
+						"Iphone13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update product by productname",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {}
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/v1.0/Shopping/Iphone13/update/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1.0",
+						"Shopping",
+						"Iphone13",
+						"update",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete product by productname",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/api/v1.0/Shopping/Iphone13/delete/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1.0",
+						"Shopping",
+						"Iphone13",
+						"delete",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add product to Cart by productName",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJndXJ1a2lyYW5AZ21haWwuY29tIiwiZXhwIjoxNjYzMjI4MTcyLCJpYXQiOjE2NjMyMjQ1NzJ9.mr9oSh1DxAAd6L6ezzEIwdWW_OQKagYP544SexWycSc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/api/v1.0/Shopping/Iphone12/addtocart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1.0",
+						"Shopping",
+						"Iphone12",
+						"addtocart"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

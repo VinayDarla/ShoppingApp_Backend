@@ -1,0 +1,5 @@
+controller\UserServiceControllerTest.class
+com\shoppingapp\userservice\UserserviceApplicationTests.class
+service\UserServiceTest.class
+service\JwUtilTest.class
+service\ServiceTest.class
